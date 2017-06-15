@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+#include "Oceny.h"
+
+using namespace std;
+
+/// ////////////////////////////////////////////////////////////////////////////////////// oceny - funkcje ///
+
+
+/// ////////////////////////////////////////////////////////////////////////////////////// main ///
+int main()
+{
+    Przedmiot_Szkolny geografia;
+    geografia.ustawNazwe("Geografia");
+    cin>>geografia;
+
+    return 0;
+}
