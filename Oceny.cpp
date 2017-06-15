@@ -21,9 +21,33 @@ void Przedmiot_Szkolny::procedura_blednego_wczytania_oceny()
     cin>>*this;
 }
 
-bool Przedmiot_Szkolny::poprawnosc_wczytanej_oceny()
+float Przedmiot_Szkolny::sprawdzenie_jaka_to_ocena(string ocena)
 {
+    const char * bufor = ocena.c_str();
+    float liczba_zwrotna = 0;
+    if(ocena.size()==1)
+    {
+        stringstream stream;
+        stream<<ocena;
+        stream>>liczba_zwrotna;
+        if(liczba_zwrotna>6 || liczba_zwrotna<1)
+        {
+            procedura_blednego_wczytania_oceny();
+        }
+    }
+    if(ispunct(bufor[0]))
+    {
+        cout<<"z przodu"<<endl;
+        if(isalpha(bufor[2]))
+        {
 
+        }
+    }
+    else if(ispunct(bufor[ocena.size()-1]))
+    {
+        cout<<"na koncu"<<endl;
+    }
+    return liczba_zwrotna;
 }
 
 /// metody publiczne klasy Przedmiot_Szkolny ///
