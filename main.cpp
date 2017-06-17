@@ -1,18 +1,23 @@
 #include <iostream>
 #include <vector>
+#include <string>
+#include <fstream>
 #include "Oceny.h"
-
+#include "Wyszukiwarka.h"
+#include "Interface_Ocen.h"
 using namespace std;
 
-/// ////////////////////////////////////////////////////////////////////////////////////// oceny - funkcje ///
 
 
 /// ////////////////////////////////////////////////////////////////////////////////////// main ///
 int main()
 {
-    Przedmiot_Szkolny geografia;
-    geografia.ustawNazwe("Geografia");
-    cin>>geografia;
-
+    InterfaceOcen interface;
+    interface.wczytaj_rodzaje_ocen("tekst.txt");
+    interface.dodajPrzedmiot();
+    interface.dodajOcene();
+    interface.pokazOceny();
     return 0;
 }
+
+
